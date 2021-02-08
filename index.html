@@ -5,18 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <script>
       window.addEventListener("$pinc.ui.auth.loggedin", function() {
-        document.getElementById('loginID').style.background = 'green';
-        alert('test');
-        try {
-          if(!!facebook){
-            facebook.loggedInCallback(JSON.stringify($pinc.auth.profile));
-          }
-          else {
-            window.webkit.messageHandlers.logincallback.postMessage(JSON.stringify($pinc.auth.profile));
-          }
-        } catch(error) {
-          console.log(error);
-        }
+        window.webkit.messageHandlers.logincallback.postMessage(JSON.stringify($pinc.auth.profile));
       });
     </script>
   </head>
