@@ -4,7 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <script>
-window.addEventListener("$pinc.ui.auth.loggedin", ()=>facebook.loggedInCallback($pinc.auth.profile););
+window.addEventListener("$pinc.ui.auth.loggedin", ()=>{
+facebook.loggedInCallback(JSON.stringify($pinc.auth.profile));
+window.webkit.messageHandlers.logincallback.postMessage(JSON.stringify($pinc.auth.profile));
+});
 </script>
 </head>
 <body>
