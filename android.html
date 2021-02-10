@@ -4,15 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <script>
-        function sampleFunction() {
-            window.location.href="https://labs.pathfix.com/integrate/command?method=call&consentURL=https%3a%2f%2fwww.facebook.com%2fv5.0%2fdialog%2foauth%3fclient_id%3d423883875612971%26redirect_uri%3dhttps%3a%2f%2flabs.pathfix.com%2fintegrate%2fcommand%26scope%3demail&provider=fbidentity&providerLabel=Facebook Identity&pinc_client_id=3685AD5D-C8A0-4734-837F-822341D2D03C&autoConsent=true&consent_redirect=https%3A%2F%2Frajesh-kumar-r.github.io%2FfacebookLogin%2Fandroid.html";
-        };
       window.addEventListener("$pinc.ui.auth.loggedin", function() {
       facebook.loggedInCallback(JSON.stringify($pinc.auth.profile));
       });
     </script>
   </head>
-  <body onload="sampleFunction()">
+  <body>
     <div>
       <script id='pinc.helper'
               src='https://labs.pathfix.com/helper.js'
