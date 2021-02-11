@@ -4,23 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <script>
-    fetch(
-      'https://labs.pathfix.com/api/connection/fbidentity?user_id=na&public_key=3685AD5D-C8A0-4734-837F-822341D2D03C&private_key=A996BD64-C8F1-4854-A31E-B48807EFBF4F',
-      { method: 'GET' },
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data.rows[0].data.authorizationUrl);
-//         window.location.replace(`${data.rows[0].data.authorizationUrl}&consented_redirect=https://rajesh-kumar-r.github.io/facebookLogin/android.html?consented_action=postmessage`);
-      });
         window.addEventListener("$pinc.ui.auth.loggedin", function() {
             facebook.loggedInCallback(JSON.stringify($pinc.auth.profile));
         });
-        window.addEventListener('message', (event) => {
-    console.log(`Received message: ${event.data}`);
-});
     </script>	
-  </head>
+  </head
   <body>
     <div style='display:none'>	
       <script id='pinc.helper'	
