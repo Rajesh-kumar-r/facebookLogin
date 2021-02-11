@@ -11,7 +11,7 @@
       .then((response) => response.json())
       .then((data) => {
         console.log(data.rows[0].data.authorizationUrl);
-        window.location.replace(`${data.rows[0].data.authorizationUrl}&consented_redirect=https://rajesh-kumar-r.github.io/facebookLogin/android.html?consented_action=postmessage`);
+//         window.location.replace(`${data.rows[0].data.authorizationUrl}&consented_redirect=https://rajesh-kumar-r.github.io/facebookLogin/android.html?consented_action=postmessage`);
       });
         window.addEventListener("$pinc.ui.auth.loggedin", function() {
             facebook.loggedInCallback(JSON.stringify($pinc.auth.profile));
