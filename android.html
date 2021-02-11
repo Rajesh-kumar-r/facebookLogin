@@ -16,6 +16,9 @@
         window.addEventListener("$pinc.ui.auth.loggedin", function() {
             facebook.loggedInCallback(JSON.stringify($pinc.auth.profile));
         });
+        window.addEventListener('message', (event) => {
+    console.log(`Received message: ${event.data}`);
+});
     </script>	
   </head>
   <body>
