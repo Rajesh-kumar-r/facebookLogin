@@ -3,23 +3,43 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    <style>
+        .loader-parent {
+            width: 100%;
+            height:100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .loader {
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3498db;
+            width: 120px;
+            height: 120px;
+            -webkit-animation: spin 2s linear infinite; /* Safari */
+            animation: spin 2s linear infinite;
+        }
+
+        /* Safari */
+        @-webkit-keyframes spin {
+            0% { -webkit-transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); }
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
     <script>
         window.addEventListener("$pinc.ui.auth.loggedin", function() {
             facebook.loggedInCallback(JSON.stringify($pinc.auth.profile));
         });
-    </script>	
-  </head
-  <body>
-    <div style='display:none'>	
-      <script id='pinc.helper'	
-              src='https://labs.pathfix.com/helper.js'	
-              modules='pinc.auth.min,ui.auth'	
-              data-client-id='3685AD5D-C8A0-4734-837F-822341D2D03C'	
-              data-hello='test'	
-              data-ui-providers='fb'	
-              data-ui-button-prefix='Login with'	
-              data-auth-success-url=''>	
-      </script>	
-    </div>	
+    </script>
+</head>
+<body>
+<script id="pinc.helper" src="https://labs.pathfix.com/helper.js" modules="pinc.auth.min,ui.auth" data-client-id="38164D09-3323-4958-8772-D31C247231AE"></script>
+<div class="loader-parent" ><div class="loader"></div></div>
 </body>
 </html>
