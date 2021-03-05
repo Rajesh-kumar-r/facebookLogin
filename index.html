@@ -7,6 +7,9 @@
         window.addEventListener("$pinc.ui.auth.loggedin", function() {
           window.webkit.messageHandlers.logincallback.postMessage(JSON.stringify(window.$pinc.auth.profile));
         });
+      window.addEventListener("$pinc.oauth.notconsented", () => {
+        window.webkit.messageHandlers.loggedInFailedCallback.postMessage('failed');
+      });
     </script>
   </head>
   <body>
