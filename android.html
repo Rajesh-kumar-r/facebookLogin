@@ -34,7 +34,10 @@
     </style>
     <script>
         window.addEventListener("$pinc.ui.auth.loggedin", function() {
-            facebook.loggedInCallback(JSON.stringify($pinc.auth.profile));
+            social.loggedInCallback(JSON.stringify($pinc.auth.profile));
+        });
+        window.addEventListener("$pinc.oauth.notconsented", () => {
+             social.loggedInFailedCallback('Failed');
         });
     </script>
 </head>
